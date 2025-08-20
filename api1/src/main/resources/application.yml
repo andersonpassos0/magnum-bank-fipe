@@ -1,8 +1,8 @@
 spring:
   datasource:
     url: jdbc:mysql://localhost:3306/fipe_db
-    username: root
-    password: root
+    username: fipe_user
+    password: fipe_pass
     driver-class-name: com.mysql.cj.jdbc.Driver
     jpa:
       hibernate:
