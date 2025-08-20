@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: API2
+  datasource:
+    url: jdbc:mysql://3306/magnum_bank?useSSL=false&serverTimezone=UTC
+    username: root
+    password: root
+
+server:
+  port: 8081
