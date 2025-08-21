@@ -34,10 +34,7 @@ public class MarcaServiceImpl implements MarcaService{
         Marca marca = marcaRepository.findByCodigo(codigo)
                 .orElseThrow(() -> new EntityNotFoundException("Marca de código " + codigo + " não encontrada!"));
 
-        System.out.println("Marca: " + marca.getNome());
-
         Page<Veiculo> veiculosList = veiculoRepository.findByMarca(marca, pageable);
-        System.out.println("veiculosList: " + veiculosList.getTotalElements());
 
         return veiculosList.map(veiculoMapper::toResponse);
     }
