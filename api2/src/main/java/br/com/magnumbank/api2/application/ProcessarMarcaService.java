@@ -51,6 +51,6 @@ public class ProcessarMarcaService {
             veiculoRepository.save(veiculo);
         }
 
-        log.info("Processado {} modelos da marca {}.", message.getNome(), response.getModelos().size());
+        log.info("Processado {} modelos da marca {}.", response.getModelos().size(), message.getNome());
     }
 }
