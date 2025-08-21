@@ -43,3 +43,9 @@ app:
       expiration: PT2H
   topics:
     marcas: fipe.marcas
+
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    path: /swagger-ui
