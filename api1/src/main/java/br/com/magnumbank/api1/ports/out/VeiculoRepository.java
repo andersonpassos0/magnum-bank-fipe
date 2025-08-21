@@ -10,4 +10,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface VeiculoRepository extends JpaRepository<Veiculo, Long> {
     Page<Veiculo> findByMarca(Marca marca, Pageable pageable);
+    long countByMarcaCodigo(String codigo);
 }
