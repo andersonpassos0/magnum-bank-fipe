@@ -6,27 +6,27 @@ spring:
     username: fipe_user
     password: fipe_pass
     driver-class-name: com.mysql.cj.jdbc.Driver
-    jpa:
-      hibernate:
-        ddl-auto: update
-      show-sql: true
-      properties:
-        hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
-    kafka:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+  kafka:
 #      bootstrap-servers: kafka:9092 -> para usar quando a API estiver rodando em kafka
-      bootstrap-servers: localhost:9092
-      consumer:
-        group-id: api2-marcas
-        key-deserializer: org.apache.kafka.common.serialization.StringDesrializer
-        value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-        properties:
-          spring.json.trusted.packages: br.com.magnumbank.api2.*
-          spring.json.value.default.type: br.com.magnumbank.api2.adapters.in.dto.MarcaMessage
-        auto-offset-reset: earliest
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: api2-marcas
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: br.com.magnumbank.api2.*
+        spring.json.value.default.type: br.com.magnumbank.api2.adapters.in.dto.MarcaMessage
+      auto-offset-reset: earliest
 
 app:
   topics:
-    fipe.marcas
+    marcas: fipe.marcas
 
 server:
   port: 8081
