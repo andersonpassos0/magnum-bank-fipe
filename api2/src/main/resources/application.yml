@@ -2,21 +2,19 @@ spring:
   application:
     name: API2
   datasource:
-    url: jdbc:mysql://localhost:3306/fipe_db
-    username: fipe_user
-    password: fipe_pass
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/fipe_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=UTF-8}
+    username: ${SPRING_DATASOURCE_USERNAME:fipe_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:fipe_pass}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: update
-    show-sql: false
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
     properties:
       hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
   kafka:
-#      bootstrap-servers: kafka:9092 -> para usar quando a API estiver rodando em kafka
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
     consumer:
-      group-id: api2-marcas
+      group-id: ${SPRING_KAFKA_CONSUMER_GROUP_ID:api2-marcas}
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
       value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
       properties:
@@ -26,7 +24,7 @@ spring:
 
 app:
   topics:
-    marcas: fipe.marcas
+    marcas: ${APP_TOPICS_MARCAS:fipe.marcas}
 
 server:
-  port: 8081
+  port: ${SERVER_PORT:8081}
