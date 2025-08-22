@@ -1,0 +1,613 @@
+{
+	"info": {
+		"_postman_id": "8a8c5b69-f115-4314-afa7-42184e2e357c",
+		"name": "MAGNUM BANK",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25357384"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"admin@magnum.com\",\r\n    \"password\":\"admin123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/auth/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"admin@magnum.com\",\r\n    \"password\":\"admin123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/auth/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Aug 2025 14:58:27 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBtYWdudW0uY29tIiwicm9sZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NTU4NzQ3MDcsImV4cCI6MTc1NTg4MTkwN30.n03Oul9yzNe88Un1ZrEAAy-5YhKrZX27_ieKXMHMshI\",\n    \"tokenType\": \"Bearer\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Busca Marcas Fipe",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/marcas/fipe",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"marcas",
+						"fipe"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Busca Marcas Fipe",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/marcas/fipe",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"marcas",
+								"fipe"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Aug 2025 14:58:42 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    \"Acura\",\n    \"Agrale\",\n    \"Alfa Romeo\",\n    \"AM Gen\",\n    \"Asia Motors\",\n    \"ASTON MARTIN\",\n    \"Audi\",\n    \"Baby\",\n    \"BMW\",\n    \"BRM\",\n    \"Bugre\",\n    \"BYD\",\n    \"CAB Motors\",\n    \"Cadillac\",\n    \"Caoa Chery\",\n    \"Caoa Chery/Chery\",\n    \"CBT Jipe\",\n    \"CHANA\",\n    \"CHANGAN\",\n    \"Chrysler\",\n    \"Citroën\",\n    \"Cross Lander\",\n    \"D2D Motors\",\n    \"Daewoo\",\n    \"Daihatsu\",\n    \"DFSK\",\n    \"Dodge\",\n    \"EFFA\",\n    \"Engesa\",\n    \"Envemo\",\n    \"Ferrari\",\n    \"FEVER\",\n    \"Fiat\",\n    \"Fibravan\",\n    \"Ford\",\n    \"FOTON\",\n    \"Fyber\",\n    \"GAC\",\n    \"GEELY\",\n    \"GM - Chevrolet\",\n    \"GREAT WALL\",\n    \"Gurgel\",\n    \"GWM\",\n    \"HAFEI\",\n    \"HITECH ELECTRIC\",\n    \"Honda\",\n    \"Hyundai\",\n    \"Isuzu\",\n    \"IVECO\",\n    \"JAC\",\n    \"Jaecoo\",\n    \"Jaguar\",\n    \"Jeep\",\n    \"JINBEI\",\n    \"JPX\",\n    \"Kia Motors\",\n    \"Lada\",\n    \"LAMBORGHINI\",\n    \"Land Rover\",\n    \"Lexus\",\n    \"LIFAN\",\n    \"LOBINI\",\n    \"Lotus\",\n    \"Mahindra\",\n    \"Maserati\",\n    \"Matra\",\n    \"Mazda\",\n    \"Mclaren\",\n    \"Mercedes-Benz\",\n    \"Mercury\",\n    \"MG\",\n    \"MINI\",\n    \"Mitsubishi\",\n    \"Miura\",\n    \"NETA\",\n    \"Nissan\",\n    \"Omoda\",\n    \"Peugeot\",\n    \"Plymouth\",\n    \"Pontiac\",\n    \"Porsche\",\n    \"RAM\",\n    \"RELY\",\n    \"Renault\",\n    \"Rolls-Royce\",\n    \"Rover\",\n    \"Saab\",\n    \"Saturn\",\n    \"Seat\",\n    \"SERES\",\n    \"SHINERAY\",\n    \"smart\",\n    \"SSANGYONG\",\n    \"Subaru\",\n    \"Suzuki\",\n    \"TAC\",\n    \"Toyota\",\n    \"Troller\",\n    \"Volvo\",\n    \"VW - VolksWagen\",\n    \"Wake\",\n    \"Walk\",\n    \"ZEEKR\"\n]"
+				}
+			]
+		},
+		{
+			"name": "Busca Marcas",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBtYWdudW0uY29tIiwicm9sZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NTU4NzQzNjIsImV4cCI6MTc1NTg4MTU2Mn0.X4JHDEJXoVBv7y_4evMuZ6pBAOk2HhIit4Bnov_8-hM",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/marcas?page=0&size=10&sort=nome,asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"marcas"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "nome,asc"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Busca Marcas",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBtYWdudW0uY29tIiwicm9sZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NTU4NzQ3MDcsImV4cCI6MTc1NTg4MTkwN30.n03Oul9yzNe88Un1ZrEAAy-5YhKrZX27_ieKXMHMshI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/marcas?page=0&size=10&sort=nome,asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"marcas"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "sort",
+									"value": "nome,asc"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Aug 2025 14:59:07 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        {\n            \"codigo\": \"1\",\n            \"nome\": \"Acura\"\n        },\n        {\n            \"codigo\": \"2\",\n            \"nome\": \"Agrale\"\n        },\n        {\n            \"codigo\": \"3\",\n            \"nome\": \"Alfa Romeo\"\n        },\n        {\n            \"codigo\": \"4\",\n            \"nome\": \"AM Gen\"\n        },\n        {\n            \"codigo\": \"5\",\n            \"nome\": \"Asia Motors\"\n        },\n        {\n            \"codigo\": \"189\",\n            \"nome\": \"ASTON MARTIN\"\n        },\n        {\n            \"codigo\": \"6\",\n            \"nome\": \"Audi\"\n        },\n        {\n            \"codigo\": \"207\",\n            \"nome\": \"Baby\"\n        },\n        {\n            \"codigo\": \"7\",\n            \"nome\": \"BMW\"\n        },\n        {\n            \"codigo\": \"8\",\n            \"nome\": \"BRM\"\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": [\n            {\n                \"direction\": \"ASC\",\n                \"property\": \"nome\",\n                \"ignoreCase\": false,\n                \"nullHandling\": \"NATIVE\",\n                \"ascending\": true,\n                \"descending\": false\n            }\n        ],\n        \"offset\": 0,\n        \"unpaged\": false,\n        \"paged\": true\n    },\n    \"last\": false,\n    \"totalElements\": 103,\n    \"totalPages\": 11,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": [\n        {\n            \"direction\": \"ASC\",\n            \"property\": \"nome\",\n            \"ignoreCase\": false,\n            \"nullHandling\": \"NATIVE\",\n            \"ascending\": true,\n            \"descending\": false\n        }\n    ],\n    \"numberOfElements\": 10,\n    \"first\": true,\n    \"empty\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "Busca Veiculos por Marca",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBtYWdudW0uY29tIiwicm9sZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NTU4NzQ3MDcsImV4cCI6MTc1NTg4MTkwN30.n03Oul9yzNe88Un1ZrEAAy-5YhKrZX27_ieKXMHMshI",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/marcas/1/veiculos?page=0&size=10&sort=id,asc",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"marcas",
+						"1",
+						"veiculos"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "0"
+						},
+						{
+							"key": "size",
+							"value": "10"
+						},
+						{
+							"key": "sort",
+							"value": "id,asc"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Busca Veiculos por Marca",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBtYWdudW0uY29tIiwicm9sZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NTU4NzQ3MDcsImV4cCI6MTc1NTg4MTkwN30.n03Oul9yzNe88Un1ZrEAAy-5YhKrZX27_ieKXMHMshI",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "http://localhost:8080/api/v1/marcas/1/veiculos?page=0&size=10&sort=id,asc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"marcas",
+								"1",
+								"veiculos"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "sort",
+									"value": "id,asc"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Aug 2025 14:59:35 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"content\": [\n        {\n            \"id\": 1,\n            \"codigo\": \"1\",\n            \"modelo\": \"Integra GS 1.8 - UPDATED\",\n            \"observacoes\": \"Observação feita através de endpoint de update\"\n        },\n        {\n            \"id\": 2,\n            \"codigo\": \"2\",\n            \"modelo\": \"Legend 3.2/3.5\",\n            \"observacoes\": null\n        },\n        {\n            \"id\": 3,\n            \"codigo\": \"3\",\n            \"modelo\": \"NSX 3.0\",\n            \"observacoes\": null\n        },\n        {\n            \"id\": 730,\n            \"codigo\": \"1\",\n            \"modelo\": \"Integra GS 1.8\",\n            \"observacoes\": null\n        },\n        {\n            \"id\": 731,\n            \"codigo\": \"2\",\n            \"modelo\": \"Legend 3.2/3.5\",\n            \"observacoes\": null\n        },\n        {\n            \"id\": 732,\n            \"codigo\": \"3\",\n            \"modelo\": \"NSX 3.0\",\n            \"observacoes\": null\n        },\n        {\n            \"id\": 7836,\n            \"codigo\": \"1\",\n            \"modelo\": \"Integra GS 1.8\",\n            \"observacoes\": null\n        },\n        {\n            \"id\": 7837,\n            \"codigo\": \"2\",\n            \"modelo\": \"Legend 3.2/3.5\",\n            \"observacoes\": null\n        },\n        {\n            \"id\": 7838,\n            \"codigo\": \"3\",\n            \"modelo\": \"NSX 3.0\",\n            \"observacoes\": null\n        },\n        {\n            \"id\": 14942,\n            \"codigo\": \"1\",\n            \"modelo\": \"Integra GS 1.8\",\n            \"observacoes\": null\n        }\n    ],\n    \"pageable\": {\n        \"pageNumber\": 0,\n        \"pageSize\": 10,\n        \"sort\": [\n            {\n                \"direction\": \"ASC\",\n                \"property\": \"id\",\n                \"ignoreCase\": false,\n                \"nullHandling\": \"NATIVE\",\n                \"ascending\": true,\n                \"descending\": false\n            }\n        ],\n        \"offset\": 0,\n        \"unpaged\": false,\n        \"paged\": true\n    },\n    \"last\": false,\n    \"totalElements\": 15,\n    \"totalPages\": 2,\n    \"size\": 10,\n    \"number\": 0,\n    \"sort\": [\n        {\n            \"direction\": \"ASC\",\n            \"property\": \"id\",\n            \"ignoreCase\": false,\n            \"nullHandling\": \"NATIVE\",\n            \"ascending\": true,\n            \"descending\": false\n        }\n    ],\n    \"numberOfElements\": 10,\n    \"first\": true,\n    \"empty\": false\n}"
+				}
+			]
+		},
+		{
+			"name": "Atualiza Veiculo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBtYWdudW0uY29tIiwicm9sZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NTU4NzQ3MDcsImV4cCI6MTc1NTg4MTkwN30.n03Oul9yzNe88Un1ZrEAAy-5YhKrZX27_ieKXMHMshI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"modelo\":\"Integra GS 1.8 - UPDATED\",\r\n    \"observacoes\":\"Observação feita através de endpoint de update\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/veiculos/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"veiculos",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Atualiza Veiculo",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbkBtYWdudW0uY29tIiwicm9sZXMiOlsiUk9MRV9VU0VSIiwiUk9MRV9BRE1JTiJdLCJpYXQiOjE3NTU4NzQ3MDcsImV4cCI6MTc1NTg4MTkwN30.n03Oul9yzNe88Un1ZrEAAy-5YhKrZX27_ieKXMHMshI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"modelo\":\"Integra GS 1.8 - UPDATED\",\r\n    \"observacoes\":\"Observação feita através de endpoint de update\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/v1/veiculos/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"veiculos",
+								"1"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "X-XSS-Protection",
+							"value": "0"
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, no-store, max-age=0, must-revalidate"
+						},
+						{
+							"key": "Pragma",
+							"value": "no-cache"
+						},
+						{
+							"key": "Expires",
+							"value": "0"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 22 Aug 2025 14:59:59 GMT"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=60"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 1,\n    \"codigo\": \"1\",\n    \"modelo\": \"Integra GS 1.8 - UPDATED\",\n    \"observacoes\": \"Observação feita através de endpoint de update\"\n}"
+				}
+			]
+		}
+	]
+}
