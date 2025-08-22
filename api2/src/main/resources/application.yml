@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: API2
+  datasource:
+    url: ${SPRING_DATASOURCE_URL:jdbc:mysql://localhost:3306/fipe_db?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC&characterEncoding=UTF-8}
+    username: ${SPRING_DATASOURCE_USERNAME:fipe_user}
+    password: ${SPRING_DATASOURCE_PASSWORD:fipe_pass}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: ${SPRING_JPA_HIBERNATE_DDL_AUTO:update}
+    properties:
+      hibernate.dialect: org.hibernate.dialect.MySQL8Dialect
+  kafka:
+    bootstrap-servers: ${SPRING_KAFKA_BOOTSTRAP_SERVERS:localhost:9092}
+    consumer:
+      group-id: ${SPRING_KAFKA_CONSUMER_GROUP_ID:api2-marcas}
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
+      properties:
+        spring.json.trusted.packages: br.com.magnumbank.api2.*
+        spring.json.value.default.type: br.com.magnumbank.api2.adapters.in.dto.MarcaMessage
+      auto-offset-reset: earliest
+
+app:
+  topics:
+    marcas: ${APP_TOPICS_MARCAS:fipe.marcas}
+
+server:
+  port: ${SERVER_PORT:8081}
