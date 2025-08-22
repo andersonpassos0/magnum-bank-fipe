@@ -1,4 +1,4 @@
-package br.com.magnumbank.api2.adapters.in;
+package br.com.magnumbank.api2.adapters.in.messaging;
 
 import br.com.magnumbank.api2.adapters.in.dto.MarcaMessage;
 import br.com.magnumbank.api2.application.ProcessarMarcaService;

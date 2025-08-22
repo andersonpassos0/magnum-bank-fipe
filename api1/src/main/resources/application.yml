@@ -22,6 +22,7 @@ spring:
         spring.json.add.type.headers: false
     admin:
       properties:
+#        bootstrap.servers: kafka:9092 -> Quando API rodando em docker
         bootstrap.servers: localhost:9092
 
   cache:
