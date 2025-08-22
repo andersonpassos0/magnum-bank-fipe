@@ -1,4 +1,4 @@
-package br.com.magnumbank.api2.adapters.in;
+package br.com.magnumbank.api2.adapters.in.kafka;
 
 import br.com.magnumbank.api2.adapters.in.dto.MarcaMessage;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
